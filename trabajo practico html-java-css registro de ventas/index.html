@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Registro de Ventas</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/productos.js"></script>
+
+
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+          <img class="pull-left"  src="img/1.jpg" width="95">
+
+            <div class="inner">
+
+              
+              <div class="nav masthead-nav">
+                <a class="btn btn-lg btn-info" onClick="Init()" role="button" id="abrir" href="javascript:void(0);">Nueva Venta</a>
+     
+              
+            </div>
+          </div>
+          <br>
+          <br>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Registro de Ventas.</h1>
+
+
+  
+            
+          </div>
+
+        <div id="consulta">
+
+
+
+
+        </div>
+
+
+
+
+
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Registro de Ventas por  Mario Gabriel Avendaño</p>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+      <!--  <table class="table">
+              <thead>
+                <th>Fecha</th>
+                <th>Cliente</th>
+                <th>Producto</th>
+                <th>Cant.</th>
+                <th>Vendedor</th>
+                <th>Oferta</th>
+                <th>Precio Unitario</th>
+                <th>Precio Final</th>
+                <th>&nbsp;</th>
+              </thead>
+              <tbody id="sells">
+                
+              </tbody>
+
+            </table>
+
+
+paginas consultadas:
+http://www.formatoweb.com.ar/ajax/select_dependientes.php
+http://stackoverflow.com/questions/698817/faster-way-to-populate-select-with-javascript
+
+          -->
+
+
+
+        
+    
+    
+    
+    
+    
+  
+    <div id="bloquer"></div>
+    <div id="ventana_emergente"> 
+      
+    
+      <fieldset>
+    <legend>Registrar nueva venta.</legend>
+    <p>Fecha:</p>
+    <input type = "text" id = "Fecha">
+    <p>Cliente:</p>
+    <input type = "text" id = "Cliente">
+    <p>Producto:</p>
+    <select id = "productos" onChange="refreshCheck()">
+  
+
+
+    </select>
+    <p>Cantidad:</p>
+    <input type = "text" id = "Cantidad">
+    <p>Vendedor:</p>
+    <select id = "vendedores">
+
+
+
+    </select>
+    <p>Producto esta en oferta <input type = "checkbox" id = "Oferta"></p>
+    
+
+    <input type = "button" onClick="CargarProducto()" value="Cargar Producto"/>
+    <input type = "button" id="cerrar" onClick="javascript:void(0);" value="Cancelar"/>
+
+  </fieldset>  
+    
+    
+    
+       
+    </div>
+
+      </div>
+
+    </div>
+
+
+  
+
+</body>
+</html>
