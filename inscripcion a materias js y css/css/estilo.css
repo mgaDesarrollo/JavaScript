@@ -1,0 +1,44 @@
+body{
+	color: #333;
+	font-family: sans-serif;
+}
+
+input{
+	display: block;
+	width: 90%;
+	padding: 6px;
+	margin: 12px 5%;
+	box-sizing: border-box;
+	border: none;
+	border-top: 2px solid #666;
+	background:transparent;
+	outline: none; !important;
+	transition: color 0.6s,background 0.6s
+	}
+
+input::placeholder{
+	color: #48e;
+}
+
+input:hover{
+	background:#26a;
+}
+
+input[type="submit"]{
+	width: 50%;
+	margin top: 18px;
+	padding: 9px;
+	border-radius: 2px;
+	background: #26a;
+	color: #fff
+}
+input[type="submit"]:hover{
+	background:#048;
+}
+form{
+	width: 60%;
+	margin: auto;
+	background-color: #026;
+	padding: 30px;
+	border-radius: 30px 5px;
+}
