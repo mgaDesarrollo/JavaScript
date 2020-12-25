@@ -4,7 +4,62 @@
 	<title> Practicando JS!!!!</title>
 </head>
 <body>
-<p>Bienvenido a Mi Página</p>
 <script src="js/miCodigo.js"></script>
+<section id="calculadora">
+	<div id="calculadoraHeader">
+		<h1>Bienvenido a Mi Calcuadoraown</h1>
+		<label id="resultadoActual"></label>
+		<div class="operacionActual">
+			<input id="numero">
+			<input type="button" class="btnResultado" value="=" onclick="mostrarResultado()">
+		</div>
+	</div>
+	<div class="botonesOperaciones">
+		<input type="button" class="operaciones" value="+" onclick="sumar()">
+		<input type="button" class="operaciones" value="-">
+		<input type="button" class="operaciones" value="*">
+		<input type="button" class="operaciones" value="/">
+	</div>
+	<label id="resultado"></label>
+</section>
 </body>
 </html>
+<style>
+	#calculadora {
+		margin: 0 auto;
+		width: 500px;
+		border: 2px solid rgb(34, 34, 126);
+	}
+	#numero {
+		font-size: 60px;
+		width: 200px;
+		height: 60px;
+	}
+	.operacionActual {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.btnResultado {
+		width: 60px;
+		font-size: 50px;
+	}
+	#resultado {
+		font-size: 40px;
+	}
+	#calculadoraHeader {
+		width: fit-content;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	.botonesOperaciones {
+		width: fit-content;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	.operaciones {
+		width: 60px;
+		height: 60px;
+		font-size: 50px;
+	}
+</style>
