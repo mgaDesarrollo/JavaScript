@@ -1,65 +1,207 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Practicando JS!!!!</title>
+		<link href='https://fonts.googleapis.com/css?family=Russo+One|Play' rel='stylesheet' type='text/css'>
+    
+    <link href='https://fonts.googleapis.com/css?family=Black+Ops+One|Audiowide' rel='stylesheet' type='text/css'>
+    
+   
+	<title> Calculadora js!!!!</title>
 </head>
 <body>
 <script src="js/miCodigo.js"></script>
 <section id="calculadora">
 	<div id="calculadoraHeader">
-		<h1>Bienvenido a Mi Calcuadoraown</h1>
+		<h1>C A S I O</h1>
 		<label id="resultadoActual"></label>
 		<div class="operacionActual">
-			<input id="numero">
-			<input type="button" class="btnResultado" value="=" onclick="mostrarResultado()">
+			<input id="numero" value='' >
 		</div>
 	</div>
 	<div class="botonesOperaciones">
-		<input type="button" class="operaciones" value="+" onclick="sumar()">
-		<input type="button" class="operaciones" value="-">
-		<input type="button" class="operaciones" value="*">
-		<input type="button" class="operaciones" value="/">
+		<div id="numeros2">
+			<button type="button" class="trigo-keys" onClick="calculo('sen');">sin</button>
+            <button type="button" class="trigo-keys" onClick="calculo('cos');">cos</button>
+            <button type="button" class="trigo-keys" onClick="calculo('tan');">tan</button>
+            <button type="button" class="trigo-keys" onClick="calculo('asen');">sin<sup>-1</sup></button>
+            <button type="button" class="trigo-keys" onClick="calculo('acos');">cos<sup>-1</sup></button>
+			<button type="button" class="trigo-keys" onClick="calculo('atan');">tan<sup>-1</sup></button>
+			<button type="button" class="trigo-keys" onClick="calculo('atan');">tan<sup>-1</sup></button>
+        	<button type="button" class="trigo-keys" onClick="calculo('logx');">log</button>
+            <button type="button" class="trigo-keys" onClick="calculo('eleva3');">x<sup>3</sup></button>
+            <button type="button" class="trigo-keys" onClick="calculo('factorial');">x!</button>
+		</div>
+		<div id="contenedor2">
+		
+				<input type="button" class="operaciones" value="+" onClick="escribir('+')">
+				<input type="button" class="operaciones" value="-" onClick="escribir('-')">
+				<input type="button" class="operaciones" value="*" onClick="escribir('*')">
+				<input type="button" class="operaciones" value="/" onClick="escribir('/')">
+				
+
+				<input type="button" class="operaciones" value="7" onClick="escribir('7')">
+				<input type="button" class="operaciones" value="8" onClick="escribir('8')">
+				<input type="button" class="operaciones" value="9" onClick="escribir('9')">
+
+				<input type="button" class="operaciones" value="x²" onClick="calculo('eleva2')">
+
+				<input type="button" class="operaciones" value="4" onClick="escribir('4')">
+				<input type="button" class="operaciones" value="5" onClick="escribir('5')">
+				<input type="button" class="operaciones" value="6" onClick="escribir('6')">
+
+				<input type="button" class="operaciones" value="√x" onClick="calculo('raiz')">
+
+                <input type="button" class="operaciones" value="1" onClick="escribir('1')">
+				<input type="button" class="operaciones" value="2" onClick="escribir('2')">
+				<input type="button" class="operaciones" value="3" onClick="escribir('3')">
+
+				<input type="button" class="operaciones" value="CE" id="clear" onClick="escribir('C')">
+                <input type="button" class="operaciones" value="0" onClick="escribir('0')">
+				<input type="button" class="operaciones" value="·"onClick="escribir('.')">
+				<input type="button" class="operaciones" value="<-"onClick="borrarUltimoNumero()">
+				<input type="button" class="operaciones" value="=" onClick="mostrarResultado()">
+			</div>
+			</div>
+
 	</div>
-	<label id="resultado"></label>
 </section>
 </body>
 </html>
 <style>
+
+ 
+#contenedor2{
+	padding-left:20px;
+	border: 1.5px solid rgba(233, 61, 61, 0.534);
+	margin:2px
+	border-radius: 1px;
+
+}
 	#calculadora {
-		margin: 0 auto;
-		width: 500px;
-		border: 2px solid rgb(34, 34, 126);
+		margin-left: 350px;
+		margin: 22 auto;
+		width: 300px;
+		border: 2px solid black;
+		border-radius: 20px;
+		padding: 20px;
+		height: 550px;
+		background:url(fondo.jpg) ;
+		-webkit-box-shadow: 48px 54px 28px 0px rgba(99,38,86,0.9);
+		-moz-box-shadow: 48px 54px 28px 0px rgba(99,38,86,0.9);
+		box-shadow: 48px 54px 28px 0px rgba(99,38,86,0.9);
+		
+	}
+	
+	@font-face {
+		font-family:digital-7;
+		src:url(digital-7.ttf);
+	}
+
+	#clear{
+		background-color: rgba(189, 42, 42, 0.986);
+	}
+	#numeros2{
+		border: 1px solid grey;
+		padding:1px;
+
 	}
 	#numero {
-		font-size: 60px;
+		 text-align:right;
+		 font-family:digital-7;
+		
+		 
+		font-size: 45px;
 		width: 200px;
 		height: 60px;
+		border-width: 5px;
+		background:#569c72;
+		padding: 10px;
+		color: #414141;
+		text-shadow: 2px 2px 2px #656565;
+		margin-bottom: 10px;
+		border-radius: 4px;
+
+		
+
+	}
+
+	body{
+		background:url(fondoBody.jpg) ;
+	}
+
+	h1{
+		text-align: center;
+  		font-family: 'Play', 'Russo One', sans-serif;
+  		font-size:2em;
+		  color: #a4b5d18e;
+		  border: 1px solid grey;
+
+	}
+	.trigo-keys{
+		width:48px;
+  height:33px;
+  font-size: .8em;
+  color: #fff;
+  margin:2px;
+  background: #2b4753;
+  border: 1px solid #1a2f38;
+  border-radius: 5px;
+  
+  
 	}
 	.operacionActual {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
-	.btnResultado {
-		width: 60px;
-		font-size: 50px;
-	}
+	
 	#resultado {
 		font-size: 40px;
 	}
+
 	#calculadoraHeader {
 		width: fit-content;
 		margin: 0 auto;
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 	}
+
 	.botonesOperaciones {
 		width: fit-content;
 		margin: 0 auto;
-		margin-bottom: 10px;
+		margin: 10px;
 	}
+
 	.operaciones {
-		width: 60px;
-		height: 60px;
-		font-size: 50px;
+		width: 50px;
+		height: 50px;
+		font-size: 23px;
+		font-style:bold;	 
+		border-radius: 8px;
+		margin: 2px;
+		-webkit-box-shadow: 4px 3px 2px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 3px 2px -1px rgba(0,0,0,0.75);
+        box-shadow: 4px 3px 2px -1px rgba(0,0,0,0.75);
+        background-color: #808080;
+        color: white;
 	}
+	.operaciones:active {
+     box-shadow: 0 3px 0 #00823F;
+     top: 3px;
+}
+	.operaciones2 {
+		width: 50px;
+		height: 30px;
+		font-size: 13px;
+		font-style:bold;	 
+		border-radius: 8px;
+		margin: 2px;
+		-webkit-box-shadow: 4px 3px 2px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 3px 2px -1px rgba(0,0,0,0.75);
+        box-shadow: 4px 3px 2px -1px rgba(0,0,0,0.75);
+        background-color: #808080;
+        color: white;
+	}
+
+	
+
 </style>
