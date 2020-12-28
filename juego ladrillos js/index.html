@@ -2,15 +2,42 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>desarrollo juego ladrillo JS</title>
+    
+
+    <title> juego ladrillo JS</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: rgb(209, 207, 207); display: block; margin: 0 auto; }
+     
+        canvas{
+          
+            top: -820px;
+            left: -50px;
+            position: relative;
+            width: 280px;
+            border-radius: 10px;
+            border: solid rgba(8, 105, 8, 0.349);
+             
+        }
+       
+            img {
+	            margin-right: 85px;
+                margin-bottom: -10px;
+
+                }
+        
+        #gameboy{
+            border: green solid;
+            position: fixed;
+        }
+        * { padding: 0; margin: 0;
+            
+ }
+        
+    	canvas { background: rgb(73, 98, 88); display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
-
-<canvas id="miCanvas" width="480" height="320"></canvas>
+<div id="gameboy" ><img src="gameboy.png" width="800" height="1000"><canvas id="miCanvas" width="450" height="450"></canvas>
+</div>
 
 <script src="juego.js"></script>
 

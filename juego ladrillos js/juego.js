@@ -40,21 +40,18 @@ document.addEventListener("keyup", teclaSoltada, false);
 document.addEventListener("mousemove", mouseMovimiento, false);
 
 function darvidas() {
-    contexto.font = "16px Arial";
-    contexto.fillStyle = "#0095DD";
-    contexto.fillText("Vidas: "+vidas, canvas.width-65, 20);
+    contexto.font = "19px Arial";
+    contexto.fillStyle = "grey";
+    contexto.fillText("Vidas: "+vidas, canvas.width-155, 20);
 }
 
 function dibujarScore() {
-    contexto.font = "16px consolas";
+    contexto.font = "20px consolas";
     contexto.fillStyle = "black";
     contexto.fillText("Score: "+score, 200, 30);
 }
-function dibujarCreditos() {
-    contexto.font = "25px consolas";
-    contexto.fillStyle = "black";
-    contexto.fillText("Gabriel Retro Games", 100, 16);
-}
+
+
 
 function mouseMovimiento(e) {
     var relativeX = e.clientX - canvas.offsetLeft;
@@ -159,7 +156,6 @@ function dibujar() {
     colisiones();
     dibujarScore();
     darvidas();
-    dibujarCreditos()
        
     if(x + dx > canvas.width-radioBola || x + dx < radioBola) {
         dx = -dx;
