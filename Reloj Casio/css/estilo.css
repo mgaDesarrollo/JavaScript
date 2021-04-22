@@ -1,0 +1,46 @@
+body {
+    background: #ffffff;
+    font-size: 2.9em;
+    display: flex;
+    
+}
+@font-face {
+    font-family:digital-7;
+    src:url(digital-7.ttf);
+}
+ 
+.reloj {
+    color: #0c0d11;
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 206px;
+    padding-right:24px ;
+    font-family:digital-7;
+
+}
+ 
+.reloj span {
+    text-shadow: 2px 1px 2px  #191955;
+   
+    
+}
+#seg{
+    font-size: 60%;
+
+}
+#casio{
+    width: 500px;
+    height: 500px;  
+    background-image: url(casio.png);
+    background-size: cover;
+    background-position: center;
+    display: center;
+
+
+
+}
+#imgCasio{
+    width: 500px; height: 500px;
+    margin-bottom:300px ;
+}
+
